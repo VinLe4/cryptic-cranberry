@@ -1,0 +1,4 @@
+.env
+.create_vector_store.py
+.scrape_to_markdown_youtube.py
+venv/
