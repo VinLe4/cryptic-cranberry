@@ -13,7 +13,7 @@ client = OpenAI()
 # === ENV CONFIG ===
 VECTOR_STORE_ID = os.getenv("VECTOR_STORE_ID")
 ARTICLES_DIR = "articles"
-TRACKING_PATH = "vector_files.json"
+TRACKING_PATH = "data/vector_files.json"
 
 DO_BUCKET = os.getenv("DO_SPACES_BUCKET")
 DO_REGION = os.getenv("DO_SPACES_REGION")
