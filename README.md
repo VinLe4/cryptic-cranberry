@@ -1,15 +1,18 @@
 ## Setup
 
 1. Clone the repository in your desired parent directory:
+
+   ```bash
    git clone https://github.com/vinle4/cryptic-cranberry.git
    cd cryptic-cranberry
+   ```
 
-2. Create a .env file in the root folder:
+3. Create a .env file in the root folder:
    (See .env.sample)
 
-3. If you do not have a vector store ID yet, you can run the create_vector_store.py file. (Make sure OPENAI_API_KEY is available in your .env)
+4. If you do not have a vector store ID yet, you can run the create_vector_store.py file. (Make sure OPENAI_API_KEY is available in your .env)
 
-4. Follow steps to run locally on machine or locally with Docker
+5. Follow steps to run locally on machine or locally with Docker
 
 ---
 
@@ -17,8 +20,10 @@
 
 Go into project's root directory and run the following terminal commands:
 
-1. pip install -r requirements.txt
-2. python main.py
+```bash
+pip install -r requirements.txt
+python main.py
+```
 
 ---
 
@@ -26,13 +31,19 @@ Go into project's root directory and run the following terminal commands:
 
 Make sure Docker is running and go into project's root directory then run the following terminal commands:
 
-    ## If using an .env file
-    1. docker build -t cryptic-cranberry-scraper .
-    2. docker run --env-file .env cryptic-cranberry-scraper
+```bash
+## If using an .env file
+docker build -t cryptic-cranberry-scraper .
+docker run --env-file .env cryptic-cranberry-scraper
+```
 
-    ## If using API keys directly in the run command
-    1. docker build-t cryptic-cranberry-scraper
-    2. docker run -e OPENAI_API_KEY=... DO_SPACES_KEY=... DO_SPACES_REGION=... DO_SPACES_BUCKET=... VECTOR_STORE_ID=... main.py
+---
+
+```bash
+## If using API keys directly in the run command
+docker build-t cryptic-cranberry-scraper
+docker run -e OPENAI_API_KEY=... DO_SPACES_KEY=... DO_SPACES_REGION=... DO_SPACES_BUCKET=... VECTOR_STORE_ID=... main.py
+```
 
 ---
 
@@ -40,14 +51,15 @@ Make sure Docker is running and go into project's root directory then run the fo
 
 You can view logs from the scheduled job on DigitalOcean:
 
-DigitalOcean Job Logs: (https://cryptic-cranberry.sgp1.digitaloceanspaces.com/logs/vector_upload.log)
+[DigitalOcean Job Logs](https://cryptic-cranberry.sgp1.digitaloceanspaces.com/logs/vector_upload.log)
 
 ---
 
 ## Assistant Playground Result
 
 Below is a screenshot showing the Assistant correctly citing the source URL for the article “How to Use YouTube with OptiSigns”:
-Playground Screenshot: (./youtube_sanity_test.png)
+
+![Playground Screenshot](./youtube_sanity_test.png)
 
 ---
 
